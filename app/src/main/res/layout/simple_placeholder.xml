@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.tuananh.recyclerviewdatabinding.view.BaseViewModel"/>
+
+        <variable
+            name="listener"
+            type="com.tuananh.recyclerviewdatabinding.view.BaseViewModel"/>
+
+    </data>
+
+    <View android:tag="placeholder"/>
+</layout>

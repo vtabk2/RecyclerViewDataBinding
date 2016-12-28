@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RecyclerView DataBinding</string>
+    <string name="text_name">Name</string>
+    <string name="text_company_name">Company Name</string>
+    <string name="text_mobile">Mobile</string>
+    <string name="text_email">Email</string>
+    <string name="text_group_name">Group Name</string>
+    <string name="text_contact_list">Contact List</string>
+</resources>

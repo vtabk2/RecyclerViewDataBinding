@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String"/>
+
+        <variable
+            name="content"
+            type="String"/>
+
+        <variable
+            name="visibility"
+            type="int"/>
+
+        <variable
+            name="onClickTitle"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="onClickContent"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="@{onClickTitle}"
+                android:padding="@dimen/margin_padding_5"
+                android:text="@{title}"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="@{onClickContent}"
+                android:padding="@dimen/margin_padding_5"
+                android:text="@{content}"/>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_line_break_form_search"
+            app:visibility="@{visibility}"/>
+    </LinearLayout>
+</layout>

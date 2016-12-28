@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.tuananh.recyclerviewdatabinding.model.Contacts"/>
+
+        <variable
+            name="listener"
+            type="com.tuananh.recyclerviewdatabinding.view.MainActivity.ItemAdapterClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padding_10"
+        android:background="@drawable/contact_background"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/item_text_contact"
+            app:content="@{viewModel.name}"
+            app:onClickContent="@{() -> listener.onItemClick(viewModel.name)}"
+            app:onClickTitle="@{() -> listener.onItemClick(@string/text_name)}"
+            app:title="@{@string/text_name}"/>
+
+        <include
+            layout="@layout/item_text_contact"
+            app:content="@{viewModel.company}"
+            app:onClickContent="@{() -> listener.onItemClick(viewModel.company)}"
+            app:onClickTitle="@{() -> listener.onItemClick(@string/text_company_name)}"
+            app:title="@{@string/text_company_name}"/>
+
+        <include
+            layout="@layout/item_text_contact"
+            app:content="@{viewModel.mobile}"
+            app:onClickContent="@{() -> listener.onItemClick(viewModel.mobile)}"
+            app:onClickTitle="@{() -> listener.onItemClick(@string/text_mobile)}"
+            app:title="@{@string/text_mobile}"/>
+
+        <include
+            layout="@layout/item_text_contact"
+            app:content="@{viewModel.email}"
+            app:onClickContent="@{() -> listener.onItemClick(viewModel.email)}"
+            app:onClickTitle="@{() -> listener.onItemClick(@string/text_email)}"
+            app:title="@{@string/text_email}"/>
+
+        <include
+            layout="@layout/item_text_contact"
+            app:content="@{viewModel.groupName}"
+            app:onClickContent="@{() -> listener.onItemClick(viewModel.groupName)}"
+            app:onClickTitle="@{() -> listener.onItemClick(@string/text_group_name)}"
+            app:title="@{@string/text_group_name}"
+            app:visibility="@{View.GONE}"/>
+
+    </LinearLayout>
+</layout>
